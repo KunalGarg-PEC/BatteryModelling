@@ -261,6 +261,7 @@ export default function ResultsPage() {
   }
 
   function onGetRecommendations() {
+    if (!result || !input) return;
     const recs = generateRecommendations(result, input);
     setRecommendations(recs);
     setRecsVisible(true);
